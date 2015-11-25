@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>index</title>
+		<link rel="stylesheet" href="/styles/main.css" type="text/css">
+	</head>
+	<body>
+		Oi
+	</body>
+
+	<script type="text/javascript">
+	if ( 'serviceWorker' in navigator ) {
+		navigator.serviceWorker.register( '/sw.js' ).then( function ( registration ) {
+				console.log( 'Registration scope: ', registration.scope );
+			}, function( why ) {
+				console.error("Installing the worker failed!:", why);
+			});
+	}
+	</script>
+</html>
