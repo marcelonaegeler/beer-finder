@@ -1,28 +1,31 @@
 {
-  "name": "beer-finder",
+  "name": "pokemons",
   "version": "1.0.0",
-  "description": "A beer finder",
+  "description": "A pokédex app",
   "main": "app.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/marcelonaegeler/beer-finder.git"
+    "url": "git+https://github.com/marcelonaegeler/pokemons.git"
   },
   "author": "Marcelo A. Naegeler",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/marcelonaegeler/beer-finder/issues"
+    "url": "https://github.com/marcelonaegeler/pokemons/issues"
   },
-  "homepage": "https://github.com/marcelonaegeler/beer-finder#readme",
+  "homepage": "https://github.com/marcelonaegeler/pokemons#readme",
   "dependencies": {
     "express": "^4.13.3",
     "jade": "^1.11.0",
     "react-dom": "^0.14.3"
   },
   "devDependencies": {
+    "babel-cli": "^6.2.0",
+    "babel-preset-react": "^6.1.18",
     "grunt": "^0.4.5",
+    "grunt-babel": "^6.0.0",
     "grunt-cli": "^0.1.13",
     "grunt-contrib-watch": "^0.6.1",
     "grunt-react": "^0.12.3",
