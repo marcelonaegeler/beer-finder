@@ -73,8 +73,6 @@
 		
 		, render: function () {
 
-			//var items = this.getContent();
-
 			return (
 				<div>
 						<Header />
@@ -92,5 +90,5 @@
 	});
 
 
-	ReactDOM.render( <Compose content="/data.json" />, document.getElementById( 'react-body' ) );
+	ReactDOM.render( <Compose content="/data/home" />, document.getElementById( 'react-body' ) );
 })();

@@ -101,8 +101,6 @@
 
 		render: function () {
 
-			//var items = this.getContent();
-
 			return React.createElement(
 				"div",
 				null,
@@ -117,5 +115,5 @@
 		}
 	});
 
-	ReactDOM.render(React.createElement(Compose, { content: "/data.json" }), document.getElementById('react-body'));
+	ReactDOM.render(React.createElement(Compose, { content: "/data/home" }), document.getElementById('react-body'));
 })();
