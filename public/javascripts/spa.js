@@ -38,6 +38,18 @@
 		displayName: "FilterBar",
 
 		render: function () {
+
+			var items = this.props.items.map(function (item, index) {
+				return React.createElement(
+					"div",
+					null,
+					React.createElement(
+						"a",
+						{ href: "#", key: index },
+						item.name
+					)
+				);
+			});
 			return React.createElement(
 				"div",
 				{ className: "filter-bar" },
@@ -45,7 +57,8 @@
 					"h4",
 					null,
 					"Filters"
-				)
+				),
+				item
 			);
 		}
 	});
@@ -57,9 +70,13 @@
 
 			var items = this.props.items.map(function (item, index) {
 				return React.createElement(
-					"a",
-					{ href: "#", key: index },
-					item.name
+					"div",
+					null,
+					React.createElement(
+						"a",
+						{ href: "#", key: index },
+						item.name
+					)
 				);
 			});
 
@@ -80,7 +97,7 @@
 		displayName: "Compose",
 
 		getInitialState: function () {
-			return { items: [] };
+			return { items: [], filters: [] };
 		},
 
 		componentDidMount: function () {
@@ -91,7 +108,7 @@
 			xhr.onreadystatechange = (function () {
 				if (xhr.status === 200 && xhr.readyState === 4) {
 					var items = JSON.parse(xhr.response);
-					this.setState({ items: items });
+					this.setState({ items: items.items, filters: items.filters });
 				}
 			}).bind(this);
 
@@ -108,7 +125,7 @@
 				React.createElement(
 					"div",
 					{ className: "content" },
-					React.createElement(FilterBar, null),
+					React.createElement(FilterBar, { items: this.state.filters }),
 					React.createElement(Body, { items: this.state.items })
 				)
 			);

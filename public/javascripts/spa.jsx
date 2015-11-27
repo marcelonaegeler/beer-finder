@@ -24,9 +24,14 @@
 
 	var FilterBar = React.createClass({
 		render: function () {
+
+			var items = this.props.items.map( function ( item, index ) {
+				return (<div><a href="#" key={index}>{item.name}</a></div>);
+			});
 			return (
 				<div className="filter-bar">
 					<h4>Filters</h4>
+					{item}
 				</div>
 			);
 		}
@@ -37,7 +42,7 @@
 		render: function () {
 	
 			var items = this.props.items.map( function ( item, index ) {
-				return (<a href="#" key={index}>{item.name}</a>);
+				return (<div><a href="#" key={index}>{item.name}</a></div>);
 			});
 	
 			return (
@@ -52,7 +57,7 @@
 
 	var Compose = React.createClass({
 		getInitialState: function () {
-			return { items: [] };
+			return { items: [], filters: [] };
 		}
 		
 		, componentDidMount: function () {
@@ -63,7 +68,7 @@
 			xhr.onreadystatechange = function () {
 				if ( xhr.status === 200 && xhr.readyState === 4 ) {
 					var items = JSON.parse( xhr.response );
-					this.setState({ items: items });
+					this.setState({ items: items.items, filters: items.filters });
 				}
 			}.bind( this );
 
@@ -79,7 +84,7 @@
 
 						<div className="content">
 
-							<FilterBar />
+							<FilterBar items={this.state.filters} />
 
 							<Body items={this.state.items} />
 
@@ -91,4 +96,5 @@
 
 
 	ReactDOM.render( <Compose content="/data/home" />, document.getElementById( 'react-body' ) );
+
 })();
