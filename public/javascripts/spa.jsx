@@ -7,7 +7,7 @@
 					<div className="content">
 
 						<span className="logo">
-							<a href="/">Pokémons</a>
+							<a href="/">Restaurants</a>
 						</span>
 
 						<form action="/" method="GET" className="header-form">

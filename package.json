@@ -1,21 +1,21 @@
 {
-  "name": "pokemons",
+  "name": "restaurants",
   "version": "1.0.0",
-  "description": "A pokédex app",
+  "description": "A restaurants app",
   "main": "app.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/marcelonaegeler/pokemons.git"
+    "url": "git+https://github.com/marcelonaegeler/restaurants.git"
   },
   "author": "Marcelo A. Naegeler",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/marcelonaegeler/pokemons/issues"
+    "url": "https://github.com/marcelonaegeler/restaurants/issues"
   },
-  "homepage": "https://github.com/marcelonaegeler/pokemons#readme",
+  "homepage": "https://github.com/marcelonaegeler/restaurants#readme",
   "dependencies": {
     "express": "^4.13.3",
     "jade": "^1.11.0",

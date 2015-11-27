@@ -16,7 +16,7 @@
 						React.createElement(
 							"a",
 							{ href: "/" },
-							"Pokémons"
+							"Restaurants"
 						)
 					),
 					React.createElement(
